@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "595311666355",
+    "project_id": "shgumed-d3027",
+    "storage_bucket": "shgumed-d3027.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:595311666355:android:232c7e83032996f018fcc6",
+        "android_client_info": {
+          "package_name": "com.example.final_pro"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFkhA3FAoiN2ZdCYLXixvBSRhseHh6dlc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
