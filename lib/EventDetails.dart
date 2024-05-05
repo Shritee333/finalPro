@@ -1,15 +1,22 @@
 import 'package:flutter/material.dart';
 
-class CutomizeOrderReq_DetailsScreen extends StatelessWidget {
+class EventDetails extends StatelessWidget {
   final Map<String, dynamic> requestData;
 
-  const CutomizeOrderReq_DetailsScreen({super.key, required this.requestData});
+  const EventDetails({super.key, required this.requestData});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Request Details'),
+        backgroundColor: const Color.fromARGB(255, 188, 31, 7),
+        title: const Text(
+          'Request Details',
+          style: TextStyle(
+            fontWeight: FontWeight.w100,
+            color: Color.fromARGB(255, 255, 255, 255),
+          ),
+        ),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),

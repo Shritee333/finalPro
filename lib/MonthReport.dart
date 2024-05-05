@@ -446,7 +446,6 @@
 // }
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class MonthReport extends StatelessWidget {
@@ -570,7 +569,6 @@ class MonthReport extends StatelessWidget {
                           ),
                         ),
                       ),
-
                       Container(
                         margin: const EdgeInsets.only(
                           left: 30,
@@ -658,8 +656,6 @@ class MonthReport extends StatelessWidget {
                           ),
                         ),
                       ),
-
-
                       Container(
                         margin: const EdgeInsets.only(
                           left: 30,
@@ -669,7 +665,6 @@ class MonthReport extends StatelessWidget {
                           '${userData['gramSangh']}',
                           style: const TextStyle(
                               fontSize: 18,
-
                               color: Color.fromARGB(255, 76, 76, 76)),
                         ),
                       ),
@@ -699,14 +694,12 @@ class MonthReport extends StatelessWidget {
                           '${userData['prabhagSangh']}',
                           style: const TextStyle(
                               fontSize: 18,
-
                               color: Color.fromARGB(255, 76, 76, 76)),
                         ),
                       ),
                       const SizedBox(
                         height: 15,
                       ),
-
                       Container(
                         margin: const EdgeInsets.only(
                           left: 30,
@@ -716,7 +709,6 @@ class MonthReport extends StatelessWidget {
                           'समूह सदस्य संख्या: ',
                           style: TextStyle(
                             fontSize: 18,
-
                             color: Color.fromARGB(255, 76, 76, 76),
                             fontWeight: FontWeight.bold,
                           ),
@@ -731,14 +723,12 @@ class MonthReport extends StatelessWidget {
                           '${userData['membCount']}',
                           style: const TextStyle(
                               fontSize: 18,
-
                               color: Color.fromARGB(255, 76, 76, 76)),
                         ),
                       ),
                       const SizedBox(
                         height: 15,
                       ),
-
                       Container(
                         margin: const EdgeInsets.only(
                           left: 30,
@@ -762,7 +752,6 @@ class MonthReport extends StatelessWidget {
                           '${userData['grpBankName']}',
                           style: const TextStyle(
                               fontSize: 20,
-
                               color: Color.fromARGB(255, 76, 76, 76)),
                         ),
                       ),
@@ -798,7 +787,6 @@ class MonthReport extends StatelessWidget {
                       const SizedBox(
                         height: 15,
                       ),
-
                       Container(
                         margin: const EdgeInsets.only(
                           left: 30,
@@ -807,10 +795,9 @@ class MonthReport extends StatelessWidget {
                         child: const Text(
                           'बचत खाते क्रमांक: ',
                           style: TextStyle(
-                            fontSize: 18,
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold
-                          ),
+                              fontSize: 18,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold),
                         ),
                       ),
                       Container(
@@ -842,7 +829,6 @@ class MonthReport extends StatelessWidget {
                           ),
                         ),
                       ),
-
                       Container(
                         margin: const EdgeInsets.only(
                           left: 30,
@@ -859,7 +845,13 @@ class MonthReport extends StatelessWidget {
                         height: 25,
                       ),
                       const Center(
-                        child: Text('अहवालाचा कालावधी',style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25,decoration: TextDecoration.underline),),
+                        child: Text(
+                          'अहवालाचा कालावधी',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 25,
+                              decoration: TextDecoration.underline),
+                        ),
                       ),
                       const SizedBox(
                         height: 15,
@@ -879,23 +871,15 @@ class MonthReport extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        margin: const EdgeInsets.symmetric(
-                          horizontal: 15,
+                        margin: const EdgeInsets.only(
+                          left: 30,
                         ),
-                        padding: const EdgeInsets.all(8.0),
-                        child: TextField(
-                          enabled: false,
-                          decoration: InputDecoration(
-                            contentPadding: const EdgeInsets.all(15),
-                            label: Text(
-                              '${userData['duration']}',
-                              style: const TextStyle(
-                                  color: Color.fromARGB(255, 76, 76, 76)),
-                            ),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10)),
-                            prefixIcon: const Icon(Icons.location_on),
-                          ),
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          '${userData['duration']}',
+                          style: const TextStyle(
+                              fontSize: 20,
+                              color: Color.fromARGB(255, 76, 76, 76)),
                         ),
                       ),
                       const SizedBox(
@@ -907,31 +891,24 @@ class MonthReport extends StatelessWidget {
                         ),
                         alignment: Alignment.centerLeft,
                         child: const Text(
-                          'बैठकींना समूह सदस्यांची उपस्थिती: ',
+                          'बैठकींना समूह सदस्यांची उपस्थिती:',
                           style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 18,
                             color: Colors.black,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
                       Container(
-                        margin: const EdgeInsets.symmetric(
-                          horizontal: 15,
+                        margin: const EdgeInsets.only(
+                          left: 30,
                         ),
-                        padding: const EdgeInsets.all(8.0),
-                        child: TextField(
-                          enabled: false,
-                          decoration: InputDecoration(
-                            contentPadding: const EdgeInsets.all(15),
-                            label: Text(
-                              '${userData['presentMembCount']}',
-                              style: const TextStyle(
-                                  color: Color.fromARGB(255, 76, 76, 76)),
-                            ),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10)),
-                            prefixIcon: const Icon(Icons.location_on),
-                          ),
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          '${userData['presentMembCount']}',
+                          style: const TextStyle(
+                              fontSize: 20,
+                              color: Color.fromARGB(255, 76, 76, 76)),
                         ),
                       ),
                       const SizedBox(
@@ -943,40 +920,39 @@ class MonthReport extends StatelessWidget {
                         ),
                         alignment: Alignment.centerLeft,
                         child: const Text(
-                          'एकूण बैठक संख्या ',
+                          'एकूण बैठक संख्या:',
                           style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 18,
                             color: Colors.black,
+                            fontWeight: FontWeight.bold,
                           ),
+                        ),
+                      ),
+                      Container(
+                        margin: const EdgeInsets.only(
+                          left: 30,
+                        ),
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          '${userData['totMeetCount']}',
+                          style: const TextStyle(
+                              fontSize: 20,
+                              color: Color.fromARGB(255, 76, 76, 76)),
                         ),
                       ),
                       const SizedBox(
                         height: 8,
+                      ),
+                      const SizedBox(
+                        height: 25,
                       ),
                       const Center(
-                        child: Text('कालावधीतील आर्थिक व्यवहार'),
-                      ),
-                      const SizedBox(
-                        height: 8,
-                      ),
-                      Container(
-                        margin: const EdgeInsets.symmetric(
-                          horizontal: 15,
-                        ),
-                        padding: const EdgeInsets.all(8.0),
-                        child: TextField(
-                          enabled: false,
-                          decoration: InputDecoration(
-                            contentPadding: const EdgeInsets.all(15),
-                            label: Text(
-                              '${userData['totMeetCount']}',
-                              style: const TextStyle(
-                                  color: Color.fromARGB(255, 76, 76, 76)),
-                            ),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10)),
-                            prefixIcon: const Icon(Icons.location_on),
-                          ),
+                        child: Text(
+                          'कालावधीतील आर्थिक व्यवहार',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 25,
+                              decoration: TextDecoration.underline),
                         ),
                       ),
                       const SizedBox(
@@ -988,31 +964,24 @@ class MonthReport extends StatelessWidget {
                         ),
                         alignment: Alignment.centerLeft,
                         child: const Text(
-                          'चालू बचत: ',
+                          'चालू बचत:',
                           style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 18,
                             color: Colors.black,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
                       Container(
-                        margin: const EdgeInsets.symmetric(
-                          horizontal: 15,
+                        margin: const EdgeInsets.only(
+                          left: 30,
                         ),
-                        padding: const EdgeInsets.all(8.0),
-                        child: TextField(
-                          enabled: false,
-                          decoration: InputDecoration(
-                            contentPadding: const EdgeInsets.all(15),
-                            label: Text(
-                              '${userData['currSav']}',
-                              style: const TextStyle(
-                                  color: Color.fromARGB(255, 76, 76, 76)),
-                            ),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10)),
-                            // prefixIcon: const Icon(Icons.location_on),
-                          ),
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          '${userData['currSav']}',
+                          style: const TextStyle(
+                              fontSize: 20,
+                              color: Color.fromARGB(255, 76, 76, 76)),
                         ),
                       ),
                       const SizedBox(
@@ -1024,31 +993,24 @@ class MonthReport extends StatelessWidget {
                         ),
                         alignment: Alignment.centerLeft,
                         child: const Text(
-                          'कर्ज वाटप रक्कम: ',
+                          'कर्ज वाटप रक्कम:',
                           style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 18,
                             color: Colors.black,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
                       Container(
-                        margin: const EdgeInsets.symmetric(
-                          horizontal: 15,
+                        margin: const EdgeInsets.only(
+                          left: 30,
                         ),
-                        padding: const EdgeInsets.all(8.0),
-                        child: TextField(
-                          enabled: false,
-                          decoration: InputDecoration(
-                            contentPadding: const EdgeInsets.all(15),
-                            label: Text(
-                              '${userData['loanDistrDate']}',
-                              style: const TextStyle(
-                                  color: Color.fromARGB(255, 76, 76, 76)),
-                            ),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10)),
-                            // prefixIcon: const Icon(Icons.location_on),
-                          ),
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          '${userData['loanDistrDate']}',
+                          style: const TextStyle(
+                              fontSize: 20,
+                              color: Color.fromARGB(255, 76, 76, 76)),
                         ),
                       ),
                       const SizedBox(
@@ -1060,31 +1022,24 @@ class MonthReport extends StatelessWidget {
                         ),
                         alignment: Alignment.centerLeft,
                         child: const Text(
-                          'एकूण बचत:  ',
+                          'एकूण बचत: ',
                           style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 18,
                             color: Colors.black,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
                       Container(
-                        margin: const EdgeInsets.symmetric(
-                          horizontal: 15,
+                        margin: const EdgeInsets.only(
+                          left: 30,
                         ),
-                        padding: const EdgeInsets.all(8.0),
-                        child: TextField(
-                          enabled: false,
-                          decoration: InputDecoration(
-                            contentPadding: const EdgeInsets.all(15),
-                            label: Text(
-                              '${userData['totSav']}',
-                              style: const TextStyle(
-                                  color: Color.fromARGB(255, 76, 76, 76)),
-                            ),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10)),
-                            prefixIcon: const Icon(Icons.location_on),
-                          ),
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          '${userData['totSav']}',
+                          style: const TextStyle(
+                              fontSize: 20,
+                              color: Color.fromARGB(255, 76, 76, 76)),
                         ),
                       ),
                       const SizedBox(
@@ -1096,38 +1051,43 @@ class MonthReport extends StatelessWidget {
                         ),
                         alignment: Alignment.centerLeft,
                         child: const Text(
-                          'एकूण परतफेड केलेले हप्ते रुपये  ',
+                          'एकूण परतफेड केलेले हप्ते रुपये:',
                           style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 18,
                             color: Colors.black,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
                       Container(
-                        margin: const EdgeInsets.symmetric(
-                          horizontal: 15,
+                        margin: const EdgeInsets.only(
+                          left: 30,
                         ),
-                        padding: const EdgeInsets.all(8.0),
-                        child: TextField(
-                          enabled: false,
-                          decoration: InputDecoration(
-                            contentPadding: const EdgeInsets.all(15),
-                            label: Text(
-                              '${userData['returnEmi']}',
-                              style: const TextStyle(
-                                  color: Color.fromARGB(255, 76, 76, 76)),
-                            ),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10)),
-                            prefixIcon: const Icon(Icons.location_on),
-                          ),
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          '${userData['returnEmi']}',
+                          style: const TextStyle(
+                              fontSize: 20,
+                              color: Color.fromARGB(255, 76, 76, 76)),
                         ),
                       ),
                       const SizedBox(
                         height: 8,
+                      ),
+                      const SizedBox(
+                        height: 25,
                       ),
                       const Center(
-                        child: Text('इतर आर्थिक व्यवहार'),
+                        child: Text(
+                          'इतर आर्थिक व्यवहार',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 25,
+                              decoration: TextDecoration.underline),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 15,
                       ),
                       const SizedBox(
                         height: 8,
@@ -1138,67 +1098,24 @@ class MonthReport extends StatelessWidget {
                         ),
                         alignment: Alignment.centerLeft,
                         child: const Text(
-                          'दंड : ',
+                          'दंड:',
                           style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 18,
                             color: Colors.black,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.symmetric(
-                          horizontal: 15,
-                        ),
-                        padding: const EdgeInsets.all(8.0),
-                        child: TextField(
-                          enabled: false,
-                          decoration: InputDecoration(
-                            contentPadding: const EdgeInsets.all(15),
-                            label: Text(
-                              '${userData['penalty,']}',
-                              style: const TextStyle(
-                                  color: Color.fromARGB(255, 76, 76, 76)),
-                            ),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10)),
-                            prefixIcon: const Icon(Icons.location_on),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 8,
                       ),
                       Container(
                         margin: const EdgeInsets.only(
                           left: 30,
                         ),
                         alignment: Alignment.centerLeft,
-                        child: const Text(
-                          'बँकेकडून प्राप्त व्याज : ',
-                          style: TextStyle(
-                            fontSize: 22,
-                            color: Colors.black,
-                          ),
-                        ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.symmetric(
-                          horizontal: 15,
-                        ),
-                        padding: const EdgeInsets.all(8.0),
-                        child: TextField(
-                          enabled: false,
-                          decoration: InputDecoration(
-                            contentPadding: const EdgeInsets.all(15),
-                            label: Text(
-                              '${userData['bankInterest']}',
-                              style: const TextStyle(
-                                  color: Color.fromARGB(255, 76, 76, 76)),
-                            ),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10)),
-                            prefixIcon: const Icon(Icons.location_on),
-                          ),
+                        child: Text(
+                          '${userData['penalty']}',
+                          style: const TextStyle(
+                              fontSize: 20,
+                              color: Color.fromARGB(255, 76, 76, 76)),
                         ),
                       ),
                       const SizedBox(
@@ -1210,31 +1127,24 @@ class MonthReport extends StatelessWidget {
                         ),
                         alignment: Alignment.centerLeft,
                         child: const Text(
-                          'गटाला इतर जमा रक्कम : ',
+                          'बँकेकडून प्राप्त व्याज:',
                           style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 18,
                             color: Colors.black,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
                       Container(
-                        margin: const EdgeInsets.symmetric(
-                          horizontal: 15,
+                        margin: const EdgeInsets.only(
+                          left: 30,
                         ),
-                        padding: const EdgeInsets.all(8.0),
-                        child: TextField(
-                          enabled: false,
-                          decoration: InputDecoration(
-                            contentPadding: const EdgeInsets.all(15),
-                            label: Text(
-                              '${userData['otherAmt']}',
-                              style: const TextStyle(
-                                  color: Color.fromARGB(255, 76, 76, 76)),
-                            ),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10)),
-                            prefixIcon: const Icon(Icons.location_on),
-                          ),
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          '${userData['bankInterest']}',
+                          style: const TextStyle(
+                              fontSize: 20,
+                              color: Color.fromARGB(255, 76, 76, 76)),
                         ),
                       ),
                       const SizedBox(
@@ -1246,31 +1156,24 @@ class MonthReport extends StatelessWidget {
                         ),
                         alignment: Alignment.centerLeft,
                         child: const Text(
-                          'इतर खर्च : ',
+                          'गटाला इतर जमा रक्कम:',
                           style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 18,
                             color: Colors.black,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
                       Container(
-                        margin: const EdgeInsets.symmetric(
-                          horizontal: 15,
+                        margin: const EdgeInsets.only(
+                          left: 30,
                         ),
-                        padding: const EdgeInsets.all(8.0),
-                        child: TextField(
-                          enabled: false,
-                          decoration: InputDecoration(
-                            contentPadding: const EdgeInsets.all(15),
-                            label: Text(
-                              '${userData['otherExpenses']}',
-                              style: const TextStyle(
-                                  color: Color.fromARGB(255, 76, 76, 76)),
-                            ),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10)),
-                            prefixIcon: const Icon(Icons.location_on),
-                          ),
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          '${userData['otherAmt']}',
+                          style: const TextStyle(
+                              fontSize: 20,
+                              color: Color.fromARGB(255, 76, 76, 76)),
                         ),
                       ),
                       const SizedBox(
@@ -1282,31 +1185,24 @@ class MonthReport extends StatelessWidget {
                         ),
                         alignment: Alignment.centerLeft,
                         child: const Text(
-                          'मानधन : ',
+                          'इतर खर्च :',
                           style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 18,
                             color: Colors.black,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
                       Container(
-                        margin: const EdgeInsets.symmetric(
-                          horizontal: 15,
+                        margin: const EdgeInsets.only(
+                          left: 30,
                         ),
-                        padding: const EdgeInsets.all(8.0),
-                        child: TextField(
-                          enabled: false,
-                          decoration: InputDecoration(
-                            contentPadding: const EdgeInsets.all(15),
-                            label: Text(
-                              '${userData['mandhan']}',
-                              style: const TextStyle(
-                                  color: Color.fromARGB(255, 76, 76, 76)),
-                            ),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10)),
-                            prefixIcon: const Icon(Icons.location_on),
-                          ),
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          '${userData['otherExpenses']}',
+                          style: const TextStyle(
+                              fontSize: 20,
+                              color: Color.fromARGB(255, 76, 76, 76)),
                         ),
                       ),
                       const SizedBox(
@@ -1318,31 +1214,56 @@ class MonthReport extends StatelessWidget {
                         ),
                         alignment: Alignment.centerLeft,
                         child: const Text(
-                          'अखेर शिल्लक हातात: ',
+                          'मानधन:',
                           style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 18,
                             color: Colors.black,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
                       Container(
-                        margin: const EdgeInsets.symmetric(
-                          horizontal: 15,
+                        margin: const EdgeInsets.only(
+                          left: 30,
                         ),
-                        padding: const EdgeInsets.all(8.0),
-                        child: TextField(
-                          enabled: false,
-                          decoration: InputDecoration(
-                            contentPadding: const EdgeInsets.all(15),
-                            label: Text(
-                              '${userData['finalBalanceHand']}',
-                              style: const TextStyle(
-                                  color: Color.fromARGB(255, 76, 76, 76)),
-                            ),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10)),
-                            // prefixIcon: const Icon(Icons.location_on),
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          '${userData['mandhan']}',
+                          style: const TextStyle(
+                              fontSize: 20,
+                              color: Color.fromARGB(255, 76, 76, 76)),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 8,
+                      ),
+                      const SizedBox(
+                        height: 8,
+                      ),
+                      Container(
+                        margin: const EdgeInsets.only(
+                          left: 30,
+                        ),
+                        alignment: Alignment.centerLeft,
+                        child: const Text(
+                          'अखेर शिल्लक हातात',
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
                           ),
+                        ),
+                      ),
+                      Container(
+                        margin: const EdgeInsets.only(
+                          left: 30,
+                        ),
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          '${userData['finalBalanceHand']}',
+                          style: const TextStyle(
+                              fontSize: 20,
+                              color: Color.fromARGB(255, 76, 76, 76)),
                         ),
                       ),
                       const SizedBox(
@@ -1354,30 +1275,31 @@ class MonthReport extends StatelessWidget {
                         ),
                         alignment: Alignment.centerLeft,
                         child: const Text(
-                          'अखेर शिल्लक बँकेत: ',
+                          'अखेर शिल्लक बँकेत:',
                           style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 18,
                             color: Colors.black,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
                       Container(
-                        margin: const EdgeInsets.symmetric(horizontal: 15),
-                        padding: const EdgeInsets.all(8.0),
-                        child: TextField(
-                          enabled: false,
-                          decoration: InputDecoration(
-                            contentPadding: const EdgeInsets.all(15),
-                            label: Text(
-                              '${userData['finalBalanceBank']}',
-                              style: const TextStyle(
-                                  color: Color.fromARGB(255, 76, 76, 76)),
-                            ),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10)),
-                            // prefixIcon: const Icon(Icons.location_on),
-                          ),
+                        margin: const EdgeInsets.only(
+                          left: 30,
                         ),
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          '${userData['finalBalanceBank']}',
+                          style: const TextStyle(
+                              fontSize: 20,
+                              color: Color.fromARGB(255, 76, 76, 76)),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 8,
+                      ),
+                      const SizedBox(
+                        height: 25,
                       ),
                       const SizedBox(
                         height: 8,

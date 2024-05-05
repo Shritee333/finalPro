@@ -1,9 +1,12 @@
+import 'package:final_pro/Event.dart';
+import 'package:final_pro/EventDetails.dart';
 import 'package:final_pro/MeetDetailsForm.dart';
 import 'package:final_pro/MemPerPass.dart';
 import 'package:final_pro/MemSav.dart';
 import 'package:final_pro/MonthReport.dart';
 import 'package:final_pro/depositExpenses.dart';
 import 'package:final_pro/memMeetSave.dart';
+import 'package:final_pro/profile.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'ActivityInfoForm.dart';
@@ -114,12 +117,12 @@ class HomePage extends StatelessWidget {
                 color: Color.fromARGB(200, 17, 17, 17),
               ),
               onTap: () {
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute<void>(
-                //     builder: (BuildContext context) => const MemDetails(),
-                //   ),
-                // );
+                Navigator.push(
+                  context,
+                  MaterialPageRoute<void>(
+                    builder: (BuildContext context) => const Profile(),
+                  ),
+                );
               },
             ),
             ListTile(
@@ -168,17 +171,17 @@ class HomePage extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          // const SizedBox(
-          //   height: 50,
-          // ),
-          // Image.asset(
-          //   'assets/images/indian-women.png',
-          //   height: 270,
-          //   width: 270,
-          // ),
-          // const SizedBox(
-          //   height: 50,
-          // ),
+          const SizedBox(
+            height: 50,
+          ),
+          Image.asset(
+            'assets/images/indian-women.png',
+            height: 270,
+            width: 270,
+          ),
+          const SizedBox(
+            height: 50,
+          ),
           Expanded(
             child: GridView.count(
               crossAxisSpacing: 5,
@@ -189,19 +192,19 @@ class HomePage extends StatelessWidget {
                 vertical: 0,
               ),
               children: [
-                OptionBox(
-                  //icon: Icons.person,
-                  name: 'बचत गट तपशील',
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const MemSav(),
-                        //     builder: (context) => const GrpInfo(),
-                      ),
-                    );
-                  },
-                ),
+                // OptionBox(
+                //   //icon: Icons.person,
+                //   name: 'बचत गट तपशील',
+                //   onTap: () {
+                //     Navigator.push(
+                //       context,
+                //       MaterialPageRoute(
+                //         builder: (context) => const MemSav(),
+                //         //     builder: (context) => const GrpInfo(),
+                //       ),
+                //     );
+                //   },
+                // ),
                 OptionBox(
                   // icon: Icons.person,
                   name: 'सदस्याचे वैयक्तिक पासबुक',
@@ -240,12 +243,12 @@ class HomePage extends StatelessWidget {
                 OptionBox(
                   name: 'सभासद बचत नोंदवही',
                   onTap: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //     builder: (context) => const MemPerPass(),
-                    //   ),
-                    // );
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const MemPerPass(),
+                      ),
+                    );
                   },
                 ),
                 OptionBox(
@@ -291,7 +294,9 @@ class HomePage extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const ActivityInfoForm(),
+                        builder: (context) => const EventDetails(
+                          requestData: {},
+                        ),
                       ),
                     );
                   },

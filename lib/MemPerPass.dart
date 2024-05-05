@@ -945,12 +945,17 @@ class _MemPerPassState extends State<MemPerPass> {
           // Example of accessing fields from userData
           final emiAmt = userData['EmiAmt'];
           final date = userData['date'];
-          // final email = userData['email'];
+          //final email = userData['email'];
 
           return Column(
             children: [
-              Text('EMI Amount: $emiAmt', style: const TextStyle(fontSize: 20),),
-              Text('Date: $date', ),
+              Text(
+                'EMI Amount: $emiAmt',
+                style: const TextStyle(fontSize: 20),
+              ),
+              Text(
+                'Date: $date',
+              ),
               //  Text('email: $email')
             ],
           );

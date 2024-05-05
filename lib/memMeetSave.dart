@@ -255,7 +255,7 @@ class _ReadDataState extends State<ReadData> {
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 188, 31, 7),
         title: const Text(
-          'उमेद स्वयंसहाय्यता समूह',
+          'सभासद बचत नोंदवही',
           style: TextStyle(
             fontWeight: FontWeight.w200,
             color: Color.fromARGB(255, 255, 255, 255),
@@ -397,8 +397,6 @@ class _ReadDataState extends State<ReadData> {
                           Text(memMeet['EmiAmt'].toString()),
                           Text(memMeet['date'].toString()),
                           Text(memMeet['email'].toString()),
-
-
                         ],
                       );
                       memMeetWidgets.add(memMeetWidget);

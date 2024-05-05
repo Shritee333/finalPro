@@ -1,5 +1,8 @@
+import 'package:final_pro/Event.dart';
+import 'package:final_pro/EventDetails.dart';
 import 'package:final_pro/MeetDetailsForm.dart';
 import 'package:final_pro/MemPerPass.dart';
+import 'package:final_pro/SavGrpDetails.dart';
 import 'package:final_pro/depositExpenses.dart';
 import 'package:final_pro/memMeetSave.dart';
 import 'package:final_pro/settings.dart';
@@ -193,28 +196,30 @@ class AdminHome extends StatelessWidget {
                 vertical: 0,
               ),
               children: [
-                // OptionBox(
-                //   //icon: Icons.person,
-                //   name: 'बचत गट तपशील',
-                //   onTap: () {
-                //     Navigator.push(
-                //       context,
-                //       MaterialPageRoute(
-                //         builder: (context) => const GrpInfo(),
-                //       ),
-                //     );
-                //   },
-                // ),
+                OptionBox(
+                  //icon: Icons.person,
+                  name: 'बचत गट तपशील',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const EventDetails(
+                          requestData: {},
+                        ),
+                      ),
+                    );
+                  },
+                ),
                 OptionBox(
                   // icon: Icons.person,
                   name: 'सदस्याचे वैयक्तिक पासबुक',
                   onTap: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //     builder: (context) => const MemPerPassForm(),
-                    //   ),
-                    // );
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const MemPerPassForm(),
+                      ),
+                    );
                   },
                 ),
                 OptionBox(
@@ -242,43 +247,42 @@ class AdminHome extends StatelessWidget {
                     );
                   },
                 ),
-
                 OptionBox(
                   // icon: Icons.help,
-                  name: 'सभासद बचत नोंदवही',
+                  name: 'कर्ज वितरण',
                   onTap: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //     builder: (context) => const MemPerPass(),
-                    //   ),
-                    // );
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const GrpInfoForm(),
+                      ),
+                    );
                   },
                 ),
-                // OptionBox(
-                //   // icon: Icons.settings,
-                //   name: 'बचत माहिती',
-                //   onTap: () {
-                //     Navigator.push(
-                //       context,
-                //       MaterialPageRoute(
-                //         builder: (context) => const MeetDetailsForm(),
-                //       ),
-                //     );
-                //   },
-                // ),
-                // OptionBox(
-                //   // icon: Icons.settings,
-                //   name: 'मासिक अहवाल',
-                //   onTap: () {
-                //     Navigator.push(
-                //       context,
-                //       MaterialPageRoute(
-                //         builder: (context) => const MonthReportForm(),
-                //       ),
-                //     );
-                //   },
-                // ),
+                OptionBox(
+                  // icon: Icons.settings,
+                  name: 'बचत माहिती',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const MeetDetailsForm(),
+                      ),
+                    );
+                  },
+                ),
+                OptionBox(
+                  // icon: Icons.settings,
+                  name: 'मासिक अहवाल',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const MonthReportForm(),
+                      ),
+                    );
+                  },
+                ),
                 OptionBox(
                   // icon: Icons.settings,
                   name: 'जमा-खर्च नोंदवही',
@@ -291,18 +295,18 @@ class AdminHome extends StatelessWidget {
                     );
                   },
                 ),
-                // OptionBox(
-                //   //icon: Icons.settings,
-                //   name: 'उपक्रम तपशील',
-                //   onTap: () {
-                //     Navigator.push(
-                //       context,
-                //       MaterialPageRoute(
-                //         builder: (context) => const ActivityInfoForm(),
-                //       ),
-                //     );
-                //   },
-                // ),
+                OptionBox(
+                  //icon: Icons.settings,
+                  name: 'उपक्रम तपशील',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const EventInfo(),
+                      ),
+                    );
+                  },
+                ),
               ],
             ),
           ),
